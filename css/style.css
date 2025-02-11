@@ -15,6 +15,8 @@ header{
     padding: 0 14px;
 }
 .div__logo {
+    display:flex;
+
 }
 .div__logo img{
     position: relative;  /* lorem */
@@ -82,6 +84,7 @@ header{
     justify-content: center;
     align-items: center;
 }
+
 .div__storyUser-container{
     width: 60.63px;
     height: 60.63px;
@@ -91,8 +94,13 @@ header{
     border: 3.5px solid transparent;
     background: 
     linear-gradient(var(--lorem-item-box),var(--lorem-item-box)) padding-box,  
-    linear-gradient(225deg, #c8c8c8, #e9e9e9, black) border-box;
+    var(--color-gradient);
     background-clip: padding-box, border-box;
+}
+.div__storyUser-container.states{
+    background: none;
+    background-clip: none;
+    border-radius: 0px;
 }
 .div__storyUser-container::before{
     content: " ";
@@ -100,6 +108,13 @@ header{
     height: 50.63px;
     position: absolute;
     border: 2.5px solid #fff;
+    border-radius: 100%;
+}
+.states .div__storyUser-container::before{
+   border: none;
+   
+}
+.div__storyUser-container.states img{
     border-radius: 100%;
 }
 .div__storyUser-container img{
